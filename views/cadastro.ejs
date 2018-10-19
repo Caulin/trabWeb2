@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Professores e suas orientações</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Lista de Professores e suas orientações</h1>
+    <ul>
+      <% docs.forEach(function(customer){ %>
+        <li>
+            <p>Nome Professor: <%= customer.nomeProfessor %> </p>
+            <span style="color:red;"><p>Orientações:</p></span>
+            <p>Nome Aluno: <%= customer.orientacoes.nomeAluno %></p>
+            <p>Tema: <%= customer.orientacoes.tema %></p>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+  <a href="/Novo">Novo cadastro</a>
+</html>
